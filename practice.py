@@ -4,7 +4,7 @@ while True :
     print("To Do List App")
     print("="*40)
     print("1.add task:")
-    print("2.remove task:")
+    print("2.remove and update task:")
     print("3.view task:")
     print("4. Exit:")
     choice=(input("\nyour choice(1-4):"))
@@ -17,6 +17,9 @@ while True :
         task= input("enter task to remove:")
         if task in tasks :
             tasks.remove(task)
+            print(tasks)
+        elif task in tasks :
+            tasks.update(task)
             print(tasks)
         else:
             print("task is not present in the list")
